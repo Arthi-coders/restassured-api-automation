@@ -1,6 +1,8 @@
 # Rest Assured API Automation Framework
 
-This project demonstrates API automation using Java and Rest Assured.
+## Overview
+
+This project demonstrates a simple and scalable API Automation Framework using Rest Assured with Java, following good design practices like service layer separation, reusable utilities, and POJO-based request/response handling.
 
 ## Tech Stack
 - Java
@@ -8,14 +10,38 @@ This project demonstrates API automation using Java and Rest Assured.
 - TestNG
 - Maven
 
-## Test Scenarios
-1. GET API - Fetch user details
-2. POST API - Create new user
-3. Response validation using POJO
-
 ## Project Structure
-tests - API test cases
-models - POJO classes for response mapping
 
-## How to Run
-mvn test
+src
+└─ test
+├─ java
+│   ├─ api
+│   ├─ base
+│   ├─ models
+│   ├─ tests
+│   └─ utils
+│
+└─ resources
+└─ requestBody
+createPost.json
+
+## Features
+- CRUD API Testing
+- Service Layer Design
+- JSON Request Handling
+- POJO Serialization & Deserialization
+- Reusable Utilities
+- Clean Framework Structure
+
+## API Tested
+https://jsonplaceholder.typicode.com
+
+## Test Scenarios
+- GET /posts
+- POST /posts
+- PUT /posts/{id}
+- DELETE /posts/{id}
+
+## How to Run Tests
+
+mvn clean test
